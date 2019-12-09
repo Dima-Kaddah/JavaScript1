@@ -32,7 +32,7 @@ books.forEach(function(getAllBooks) {
 //log the book title and book title and author in (same function)with conditional statement for book reading
 books.forEach(function(getAllBooks) {
   console.log(`${getAllBooks.title} By ${getAllBooks.author}`);
-  if (getAllBooks.alreadyRead == true) {
+  if (getAllBooks.alreadyRead === true) {
     console.log(`You already read "${getAllBooks.title}"`);
   } else {
     console.log(`You still need to read "${getAllBooks.title}"`);
