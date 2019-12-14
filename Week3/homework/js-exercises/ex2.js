@@ -1,3 +1,4 @@
+'use strict';
 //from dog years to human years: age of the dog as human
 function calculateDogAge(number) {
   if (number !== 0 && number <= 20) {

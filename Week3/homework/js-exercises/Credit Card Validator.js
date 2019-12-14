@@ -1,3 +1,4 @@
+'use strict';
 function creditCard(ccNum) {
   //Declare varibles
   let sum = 0;
@@ -6,7 +7,7 @@ function creditCard(ccNum) {
   // loop to get all values in the string
   for (let i = 0; i < ccNum.length; i++) {
     //sum
-    sum += parseInt(ccNum[i]);
+    sum += parseInt(ccNum[i], 10);
     //equality
     if (ccNum[i] === ccNum[0]) {
       count++;
@@ -15,22 +16,22 @@ function creditCard(ccNum) {
 
   if (
     //only numbers with out symbols characters or letters/globel
-    !/\d{16}(~\W[a-zA-Z])*$/g.test(ccNum) ||
+    !/^\d{16}(~\W[a-zA-Z])*$/g.test(ccNum) ||
     //every number must be 16.lenght
-    ccNum === 16 ||
+    // ccNum.length !== 16 ||
     // // substring(-1)
     //last character must be even number
     ccNum.slice(-1) % 2 !== 0 ||
     sum <= 16 ||
     count === 16
   ) {
-    console.log('invalid number');
-  } else console.log('vaild number');
+    return 'invalid number';
+  } else return 'vaild number';
 }
 
-creditCard('9999777788880000');
-creditCard('6666666666661666');
-creditCard('a92332119c011112'); //(invalid characters)
-creditCard('4444444444444444'); //(only one type of number)
-creditCard('1111111111111110'); //(sum less than 16)
-creditCard('6666666666666661'); //(odd final number)
+console.log(creditCard('9999777788880000'));
+console.log(creditCard('6666666666661666'));
+console.log(creditCard('a92332119c011112')); //(invalid characters)
+console.log(creditCard('4444444444444444')); //(only one type of number)
+console.log(creditCard('1111111111111110')); //(sum less than 16)
+console.log(creditCard('6666666666666661')); //(odd final number)

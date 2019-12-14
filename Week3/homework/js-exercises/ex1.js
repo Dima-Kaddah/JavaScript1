@@ -1,3 +1,4 @@
+'use strict';
 // giveCompliment function with parameter (myname)in it araay inc 10 strings
 function giveCompliment(Dima) {
   const compliment = [

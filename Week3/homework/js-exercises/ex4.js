@@ -1,3 +1,4 @@
+'use strict';
 //Create an array with 2 predefined strings
 let shoppingCart = ['bananas 🍌', 'Milk🥛'];
 //rite a function named addToShoppingCart.It takes in 1 argument
